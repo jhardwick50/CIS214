@@ -9,6 +9,7 @@ package deck;
  *
  * @author Jason
  */
+//Created Face enum instead of array
 public enum Face {
     ACE, DEUCE, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING;
     

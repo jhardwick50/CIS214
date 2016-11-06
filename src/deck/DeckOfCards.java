@@ -30,7 +30,7 @@ public class DeckOfCards {
         for (int count = 0; count < deck.length; count++){
             deck[count] = 
                  new Card(Face.values()[count % 13], Suit.values()[count/13]);
-            
+                 
                 
         }
     }  
@@ -40,10 +40,10 @@ public class DeckOfCards {
             //next call to method dealCard should start at deck[0} again
             currentCard = 0;
             
-            //for each card, pick another random Card (0-51) and swap them
-            for (int first = 0; first < deck.length; first++){
-                //select a random number between 0 and 51
-                int second = randomNumbers.nextInt(NUMBER_OF_CARDS);
+            //This is a Fisher Yates shuffle because for each card, pick another random Card (0-index) and swap them with the current card.
+            for (int first = deck.length - 1; first > 0; first--){
+                //select a random number between 0 and index first.
+                int second = randomNumbers.nextInt(first);
                 
                 //swap current Card with randomly selected Card
                 Card temp = deck[first];

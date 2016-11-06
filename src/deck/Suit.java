@@ -9,7 +9,7 @@ package deck;
  *
  * @author Jason
  */
-
+//created suit enum instead of array
 public enum Suit { 
     HEARTS, DIAMONDS, CLUBS, SPADES
     
